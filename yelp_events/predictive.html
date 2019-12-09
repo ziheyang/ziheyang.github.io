@@ -70,24 +70,6 @@
 							</p>
 							
 						</header>
-
-						<!-- Content -->
-						<section id="content1">
-							<div class="row">
-								<header>
-									<h3>Feature Selection </h3>
-									<p>Univariate Selection</p>
-								</header>
-								<p>
-									<span class="image fit"><img src="images/pa_05.png" alt="" /></span>
-									Statistical tests can be used to select those features that have the strongest relationship with the output variable. <br/>
-									The scikit-learn library provides the SelectKBest class that can be used with a suite of different statistical tests to select a specific number of features. <br/>
-									The example below uses the chi-squared (chi²) statistical test for non-negative features to select 19 of the best features from the Dataset. <br/>
-								</p>
-							<div/>
-
-						</section>
-						<hr />
 						<section>
        							 <h3>Prediction with 19 Variables</h3>
       							  <div class="row">
@@ -103,6 +85,7 @@
         						  </ul>
 
         						 </div>
+								  
         					 <div class="col-6 col-12-xsmall">
         					  <!-- <h4>Ordered</h4> -->
         					  <p>
@@ -115,6 +98,25 @@
         					 </div>
        						 </div>
      						 </section>	
+
+						<hr />
+						<!-- Content -->
+      <section id="content1">
+       <div class="row">
+        <header>
+         <h3>Feature Selection </h3>
+         <p>Univariate Selection</p>
+        </header>
+        <p>
+         <span class="image fit"><img src="images/pa_05.png" alt="" /></span>
+         Statistical tests can be used to select those features that have the strongest relationship with the output variable. <br/>
+         The scikit-learn library provides the SelectKBest class that can be used with a suite of different statistical tests to select a specific number of features. <br/>
+         The example below uses the chi-squared (chi²) statistical test for non-negative features to select 19 of the best features from the Dataset. <br/>
+        </p>
+       <div/>
+
+      </section>
+						
 
 						<hr />
 
@@ -238,6 +240,142 @@
 									</div>
 								</div>
 						</section>
+      						<hr />
+	      					<section>
+								<h3>Hypothesis I</h3>
+								<div class="row">
+									<div class="col-6 col-12-xsmall">
+										<!-- <h4>Unordered</h4> -->
+										<ul>
+											<li> 
+												<span class="image fit"><img src="images/fullols.JPEG" alt="" /></span>
+											</li>
+						
+											
+										</ul>
+
+									</div>
+									<div class="col-6 col-12-xsmall">
+										<!-- <h4>Ordered</h4> -->
+										<p>
+											H0: All the factors are statistically significant for predicting how many times an event is repeated <br/>
+											HA: At least one factor does not have a relationship with how many times an event is repeated<br/>
+											
+
+											We conclude the following independent variables are statistically significant:<br/>
+											
+											description_words: count of words in an event description<br/>
+											duration: duration of an event<br/>
+											day_of_week: 0-6 represents Monday-Sunday correspondingly<br/>
+											shortest_transit: the distance from an event to the closest transportation<br/>
+											num_business: number of businesses around an event within 1 km<br/>
+											From the summary plot, we found the equation for our linear regression model to be:<br/>
+											recusive_count = 64.3301 - 2.2243*description_words- 0.3132*duration<br/>
+											+ 1.0808*day_of_week -0.0261*shortest_transit +0.0059*num_business
+										</p>
+											
+									</div>
+								</div>
+						</section>
+	      
+	      					<hr/>
+	      					<section>
+								<h3>Hypothesis II</h3>
+								<div class="row">
+									<div class="col-6 col-12-xsmall">
+										<!-- <h4>Unordered</h4> -->
+										<ul>
+											<li> 
+												<span class="image fit"><img src="images/fulllogit.jpg" alt="" /></span>
+											</li>
+						
+											
+										</ul>
+
+									</div>
+									<div class="col-6 col-12-xsmall">
+										<!-- <h4>Ordered</h4> -->
+										<p>
+											H0: All the factors are statistically insignificant for predicting the probability of an attractive event <br/>
+											HA: there is significant relationship between the attractive events and at least one of the independent variables<br/>
+											
+
+											We conclude the following independent variables are statistically significant:<br/>
+											
+											num_transits: number of transportations within 500m of an event<br/>
+											duration: duration of an event<br/>
+											recursive_count: how many times an event is repeated<br/>
+											shortest_transit: the distance from an event to the closest transportation<br/>
+											num_business: number of businesses around an event within 1 km<br/>
+											From the summary plot, we found the equation for our logistic regression model to be:<br/>
+											P(attractive_evets) = -0.0004*num_business-0.0501*num_transits +0.0517*duration<br/>
+											-0.0072*recursive_count -0.0012*shortest_transit
+										</p>
+											
+									</div>
+								</div>
+						</section>
+	      					<hr /> 
+	      					<section>
+								<h3>Hypothesis III (part1)</h3>
+								<div class="row">
+									<div class="col-6 col-12-xsmall">
+										<!-- <h4>Unordered</h4> -->
+										<ul>
+											<li> 
+												<span class="image fit"><img src="images/meanparticipants.jpeg" alt="" /></span>
+											</li>
+											<li> 
+												<span class="image fit"><img src="images/pvalattendance.jpeg" alt="" /></span>
+											</li>
+						
+											
+										</ul>
+
+									</div>
+									<div class="col-6 col-12-xsmall">
+										<!-- <h4>Ordered</h4> -->
+										<p>
+											H0: the mean attendance for events held in New York, Brooklyn, and Long Island City are the same.<br/>
+											HA: the mean attendance for events held in New York, Brooklyn, and Long Island City are not the same.<br/>
+											
+										</p>
+											
+									</div>
+								</div>
+						</section>
+	      					<hr />
+	      					<section>
+								<h3>Hypothesis III (part2)</h3>
+								<div class="row">
+									<div class="col-6 col-12-xsmall">
+										<!-- <h4>Unordered</h4> -->
+										<ul>
+											<li> 
+												<span class="image fit"><img src="images/meancost.jpeg" alt="" /></span>
+											</li>
+											<li> 
+												<span class="image fit"><img src="images/pvalcost.jpeg" alt="" /></span>
+											</li>
+						
+											
+										</ul>
+
+									</div>
+									<div class="col-6 col-12-xsmall">
+										<!-- <h4>Ordered</h4> -->
+										<p>
+											H0: the mean attendance for events held in New York, Brooklyn, and Long Island City are the same.<br/>
+											HA: the mean attendance for events held in New York, Brooklyn, and Long Island City are not the same.<br/>
+											
+										</p>
+											
+									</div>
+								</div>
+						</section>
+	      
+	   
+	      
 
 						<hr />
 
