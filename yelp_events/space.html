@@ -71,6 +71,35 @@
 						</header>
 						
 						<section>
+       							 <h3>Classification</h3>
+      							  <div class="row">
+       							  <div class="col-6 col-12-xsmall">
+       							   <!-- <h4>Unordered</h4> -->
+       							   <ul>
+         						  <li> 
+         						   <span class="image fit"><img src="images/spaceroc.jpeg" alt="" /></span>
+        						   </li>
+         						  <!-- <li>Categorical variables
+          						  <span class="image fit"><img src="images/ea_02.png" alt="" /></span>
+         						  </li> -->
+        						  </ul>
+
+        						 </div>
+								  
+        					 <div class="col-6 col-12-xsmall">
+        					  <!-- <h4>Ordered</h4> -->
+        					  <p>
+						We implemented 5 classification methods to predict if an event is popular with only three space related variables. To evaluate the performance of these models, we split the dataset into 80% of training data and 20% of test data and calculated accuracy of the trained model on test data. At the first glance, the accuracy for these models are better than random guess, which is ideal. However, if we take a further look at the confusion matrix of each model, we find the precision of predicting unattractive events is pretty low relative to precision of predicting attractive events. This means there are way more unattractive events than attractive events in our dataset. Among the 5 classifiers, SVM returned relatively high precision for both categories. With that being said, we determine that SVM performed the best.<br/> 
+					        This result aligns with the classfication output using 19 variables.
+						 </p>
+        					 </div>
+       						 </div>
+     						 </section>
+						
+						
+						<hr/>
+						
+						<section>
        							 <h3>Linear Regression</h3>
       							  <div class="row">
        							  <div class="col-6 col-12-xsmall">
