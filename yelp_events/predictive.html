@@ -101,7 +101,7 @@
         					   SVM: 0.731084 (0.019080) <br/>
         					  </p>
 						  <p>
-						We performed cross-validation, which repeats the train-validate split inside the training data. The upper left is the mean accuracy and standard deviation of it for the five methods. As we mentioned, we cannot simply choose the optimal model based on the accuracy, because with extreme cutoffs or highly unbalanced data set, 
+						We performed cross-validation, which repeats the train-validate split inside the training data. Here is the mean accuracy and standard deviation of it for the five methods. As we mentioned, we cannot simply choose the optimal model based on the accuracy, because with extreme cutoffs or highly unbalanced data set, 
 						the accuracy may be high, but it will not be the same case for true positive rate or false positive rate. In order to select best prediction model, we plot ROC curve. Normally we use 0.5 as the probability assigned to each observation, but sensitivity(tpr) decreases as the cutoff is increased, while specificity(fpr) increases as the cutoff increases. 
 						Therefore, Instead of manually checking probability cutoffs, we created an ROC curve which will sweep through all possible cutoffs, and plot the sensitivity (true positive rate) against the  false positive rate (specificity). We observe the area under Random Forest is the largest, and the area under Decision Tree is the smallest. We determine Random Forest to be the best classfier. 
 						</p>
