@@ -79,7 +79,12 @@
          						  <li> 
          						   <span class="image fit"><img src="images/pa_01.png" alt="" /></span>
         						   </li>
-         						  <!-- <li>Categorical variables
+								   
+						          <p>We implemented 5 classification methods to predict if an event is popular. We used all the variables as predictors, excluding number of participants and the response variable “attractive_events”, because the response variable is categorized based on the number of participants. 
+							To evaluate the performance of these models, we split the dataset into 80% of training data and 20% of test data and calculated accuracy of the trained model on test data. At the first glance, the accuracy for these models are better than random guess, which is ideal. 
+							However, if we take a further look at the confusion matrix of each model, we find the precision of predicting unattractive events is pretty low relative to precision of predicting attractive events. This means there are way more unattractive events than attractive events in our dataset. 
+							Among the 5 classifiers, SVM returned relatively high precision for both categories. With that being said, we determine that SVM performed the best. </p>
+        						  <!-- <li>Categorical variables
           						  <span class="image fit"><img src="images/ea_02.png" alt="" /></span>
          						  </li> -->
         						  </ul>
@@ -95,6 +100,11 @@
         					   NB: 0.727198 (0.020393) <br/>
         					   SVM: 0.731084 (0.019080) <br/>
         					  </p>
+						  <p>
+						We performed cross-validation, which repeats the train-validate split inside the training data. The upper left is the mean accuracy and standard deviation of it for the five methods. As we mentioned, we cannot simply choose the optimal model based on the accuracy, because with extreme cutoffs or highly unbalanced data set, 
+						the accuracy may be high, but it will not be the same case for true positive rate or false positive rate. In order to select best prediction model, we plot ROC curve. Normally we use 0.5 as the probability assigned to each observation, but sensitivity(tpr) decreases as the cutoff is increased, while specificity(fpr) increases as the cutoff increases. 
+						Therefore, Instead of manually checking probability cutoffs, we created an ROC curve which will sweep through all possible cutoffs, and plot the sensitivity (true positive rate) against the  false positive rate (specificity). We observe the area under Random Forest is the largest, and the area under Decision Tree is the smallest. We determine Random Forest to be the best classfier. 
+						</p>
         					 </div>
        						 </div>
      						 </section>	
