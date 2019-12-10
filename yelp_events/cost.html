@@ -1,0 +1,193 @@
+<!DOCTYPE HTML>
+<!--
+	Landed by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>No Sidebar - Landed by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<!-- <h1 id="logo"><a href="index.html">Landed</a></h1> -->
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li>
+								<a href="blank.html">Dataset</a>
+								<ul>
+									<li><a href="#">Data Collection</a></li>
+									<li><a href="#">Data Manipulation</a></li>
+									<li><a href="#">Dataset Attibutes</a></li>
+									<li><a href="#">Data Issues</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="explorary.html">Analysis</a>
+								<ul>
+									<li><a href="explorary.html">Exploratory Analysis</a></li>
+									<li>
+										<a href="#">Effect Analysis</a>
+										<ul>
+											<li><a href="#">Theme</a></li>
+											<li><a href="#">Time</a></li>
+											<li><a href="#">Space</a></li>
+											<li><a href="#">Cost</a></li>
+										</ul>
+									</li>
+									<li><a href="#">Predictive Analysis</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="discussion.html">Discussion</a>
+								<ul>
+									<li><a href="discussion.html">Ethical Considerations</a></li>
+									<li><a href="discussion.html">Limitations & Future Study</a></li>
+									<li><a href="discussion.html">Conclusion</a></li>
+								</ul>
+							</li>
+							<li><a href="blank.html" class="button primary">Github</a></li>
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Main -->
+				<div id="main" class="wrapper style1">
+					<div class="container">
+						<header class="major">
+							<h2>Cost Analysis</h2>
+							<p>In this section, our objective is to understand the effect of cost on event attractivenss. We will use two approaches: hypothesis testing and association rules. We will first identify the linear relationship between cost and attractiveness, adding other variables if necessary, then look at specific associations between these variables to further understand how cost affects event attractiveness.</p>
+						</header>
+
+						
+
+						<section>
+								<h3>Hypothesis Testing </h3>
+								<p>In this section, we will use linear regression models to look at the relationship between event cost and event attractiveness. We will try a few linear models and bring in other reasonable variables along the way, if they add to the story.</p>
+								<div class="row">
+									<div class="col-6 col-12-xsmall">
+										<!-- <h4>Unordered</h4> -->
+										<ul>
+											<span class="image fit"><img src="images/cost_models.png" alt="" /></span>
+											<p>In these hypothesis tests, we see that cost along has no significant correlation with event attractiveness, but when event category and district are taken into consideration, we can see that cost becomes a significant predictor for attractiveness, the higher the cost, the lower the attractivenss.</p> <br/>
+											<p>To visualize this, consider the 3-D plots below.</p>
+										</ul>
+										<ul>
+											<span class="image fit"><img src="images/cost_district_1.png" alt="" /></span>
+											<span class="image fit"><img src="images/cost_district_2.png" alt="" /></span>
+											<p>These plots show cost and event attractiveness by districts. We can see that in some districts, the higher the cost, the lower the attractiveness (e.g. Midtown South Central), whereas in other districts, the higher the cost, the higher the attractivenss (Stuyvesant Town).</p> <br/>
+											<p>Similarly, we can visulize the relationship between cost and event attractiveness color coded by event category.</p>
+										</ul>
+										<ur>
+											<span class="image fit"><img src="images/cost_category.png" alt="" /></span>
+											<p>This plot shows cost and event attractiveness by event category. We can see that in most categories, attractive events have lower costs, except maybe for festive-fairs or charity types of events.</p>
+										</ur>
+									</div>
+									
+								</div>
+						</section>
+
+						<hr />
+
+						<!-- Content -->
+						<section>
+							<h3>Association Rules </h3>
+							<div class="row">
+								<div class="col-6 col-12-xsmall">
+									<!-- <h4>Unordered</h4> -->
+									<ul>
+										<li> 
+											<span class="image fit"><img src="images/cost_ar_1.png" alt="" /></span>
+										</li>
+										<li>
+											<span class="image fit"><img src="images/cost_ar_2.png" alt="" /></span>
+										</li>
+									</ul>
+
+								</div>
+								<div class="col-6 col-12-xsmall">
+									<!-- <h4>Ordered</h4> -->
+									<h4>Finding 1:</h4> 
+									<b>"0.0", "Lower East Side", "Bedford-Stuyvesant", "performing-arts", "boring".</b> <br/>
+									Events that are free of cost, that happen on the lower east side or Bedford-Stuyvesant district, are usually about performing arts and are not high on attractiveness. <br/>
+									<h4>Finding 2:</h4>
+									<b>"100", "koreatown", "visual-arts", "boring". </b><br/>
+									Visual-arts events in Koreatown that cost 100 dollars are not attractive. <br/>
+									<h4>Finding 3:</h4> 
+									<b>"7", "east village", "film".</b> <br/>
+									Events that cost 7 dollars in the east village district are about films, but this rule informs us nothing about the event attractiveness. <br/>
+								</div>
+							</div>
+						</section>
+
+						
+
+
+						<!-- <section>
+								<h3>Lists</h3>
+								<div class="row">
+									<div class="col-6 col-12-xsmall">
+
+										<h4>Unordered</h4>
+										<ul>
+											<li>Dolor pulvinar etiam magna etiam.</li>
+											<li>Sagittis adipiscing lorem eleifend.</li>
+											<li>Felis enim feugiat dolore viverra.</li>
+										</ul>
+
+									</div>
+									<div class="col-6 col-12-xsmall">
+
+										<h4>Ordered</h4>
+										<ol>
+											<li>Dolor pulvinar etiam magna etiam.</li>
+											<li>Etiam vel felis at lorem sed viverra.</li>
+											<li>Felis enim feugiat dolore viverra.</li>
+											<li>Dolor pulvinar etiam magna etiam.</li>
+											<li>Etiam vel felis at lorem sed viverra.</li>
+											<li>Felis enim feugiat dolore viverra.</li>
+										</ol>
+									</div>
+								</div>
+						</section> -->
+
+					</div>
+				</div>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<ul class="icons">
+						<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+						<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
