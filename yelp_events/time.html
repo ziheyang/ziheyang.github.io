@@ -1,0 +1,262 @@
+<!DOCTYPE HTML>
+<!--
+	Landed by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>No Sidebar - Landed by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header">
+					<!-- <h1 id="logo"><a href="index.html">Landed</a></h1> -->
+					<nav id="nav">
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li>
+								<a href="blank.html">Dataset</a>
+								<ul>
+									<li><a href="#">Data Collection</a></li>
+									<li><a href="#">Data Manipulation</a></li>
+									<li><a href="#">Dataset Attibutes</a></li>
+									<li><a href="#">Data Issues</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="explorary.html">Analysis</a>
+								<ul>
+									<li><a href="explorary.html">Exploratory Analysis</a></li>
+									<li>
+										<a href="#">Effect Analysis</a>
+										<ul>
+											<li><a href="theme.html">Theme</a></li>
+											<li><a href="time.html">Time</a></li>
+											<li><a href="space.html">Space</a></li>
+											<li><a href="cost.html">Cost</a></li>
+										</ul>
+									</li>
+									<li><a href="predictive.html">Predictive Analysis</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="discussion.html">Discussion</a>
+								<ul>
+									<li><a href="discussion.html">Ethical Considerations</a></li>
+									<li><a href="discussion.html">Limitations & Future Study</a></li>
+									<li><a href="discussion.html">Conclusion</a></li>
+								</ul>
+							</li>
+							<li><a href="blank.html" class="button primary">Github</a></li>
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Main -->
+				<div id="main" class="wrapper style1">
+					<div class="container">
+						<header class="major">
+							<h2>Time Analysis</h2>
+							<h3>Factors: day of week, day of time, event duration</h3>
+							<!-- <h3>Dependnet Variables: attractive event (participants)</h3> -->
+							<p>In this section, our objective is to understand the effect of time on event attractivenss. We will use two approaches: clustering and regression. </p>
+						</header>
+
+						<section>
+								<h3>Time and Participants</h3>
+								<div class="row">
+									<div class="col-6 col-12-xsmall">
+										<!-- <h4>Unordered</h4> -->
+										<ul>
+											<li>Day of Week with Participants
+												<span class="image fit"><img src="images/tm_01.png" alt="" /></span>
+											</li>
+											<li>Day of Time with Participants
+												<span class="image fit"><img src="images/tm_02.png" alt="" /></span>
+											</li>
+										</ul>
+
+									</div>
+									<div class="col-6 col-12-xsmall">
+										<!-- <h4>Ordered</h4> -->
+										<p>First, we explore the relationship between day of week and participants, day of time with participants.</p>
+										<p>In the graph of day of week and participants, we could see that Monday is the most popular day. </p>
+										<p> </p>
+										<p>In the graphs of day of time and participants, we could see that "Morning" is the most popular time for people to attend the event. </p>
+
+									</div>
+								</div>
+						</section>
+
+						<hr />
+
+						<section>
+								<h3>Clustering - Dimension Reduction</h3>
+								<div class="row">
+									<div class="col-6 col-12-xsmall">
+										<!-- <h4>Unordered</h4> -->
+										<ul>
+											<li>2 Component PCA vs Attractive Event
+												<span class="image fit"><img src="images/tm_03.png" alt="" /></span>
+											</li>
+											<li>Number of Components vs Explained Variance
+												<span class="image fit"><img src="images/tm_04.png" alt="" /></span>
+											</li>
+										</ul>
+
+									</div>
+									<div class="col-6 col-12-xsmall">
+										<!-- <h4>Ordered</h4> -->
+										<p>In order to interprete variables easily in clustering result, we choose PCA to reduce our dimentions. In the first graph, it shows 2 component PCA. Cases in green means attractive events, cases in red means not attractive events. </p>
+										<p>The explained variance is 0.43 for 2 component PCA. In the second graph, we could observe the relationship between components and explained variance. There is not an optimal components we could choose. Therefore, we still use 2 components in the following clustering analysis. </p>
+
+									</div>
+								</div>
+						</section>
+
+						<hr />
+
+						<section>
+								<h3>Clustering - K-Means</h3>
+								<div class="row">
+									<div class="col-6 col-12-xsmall">
+										<!-- <h4>Unordered</h4> -->
+										<ul>
+											<li>Silhouette Method For Optimal k
+												<span class="image fit"><img src="images/tm_05.png" alt="" /></span>
+											</li>
+											<li>K-means Clustering
+												<span class="image fit"><img src="images/tm_06.png" alt="" /></span>
+											</li>
+										</ul>
+
+									</div>
+									<div class="col-6 col-12-xsmall">
+										<!-- <h4>Ordered</h4> -->
+										<p>We try to use k-means clustering to find whether these time variables could give some clusters and help analysis. First, we use Silhouette method to find the optimal k. In the first graph, we could find that k should be 7. </p>
+										<p>The result of K-means clustering is in the second graph. The silhouette score is 0.86. </p>
+
+									</div>
+								</div>
+						</section>
+
+						<hr />
+
+
+						<section>
+								<h3>Clustering - Hierarchical</h3>
+								<div class="row">
+									<div class="col-6 col-12-xsmall">
+										<!-- <h4>Unordered</h4> -->
+										<ul>
+											<li>Dendograms
+												<span class="image fit"><img src="images/tm_07.png" alt="" /></span>
+											</li>
+											<li>Hierarchical Clustering
+												<span class="image fit"><img src="images/tm_08.png" alt="" /></span>
+											</li>
+										</ul>
+
+									</div>
+									<div class="col-6 col-12-xsmall">
+										<!-- <h4>Ordered</h4> -->
+										<p>We try to use hierarchical clustering to find whether these time variables could give some clusters and help analysis. First, we use dengograms method to find the proper k. In the first graph, we could find that k should be 3. </p>
+										<p>The result of hierarchical clustering is in the second graph. The silhouette score is 0.73. </p>
+										<p>From the result, k-means has a bettern performance. However, we only cover 43% data due to dimension reduction. The result might not be representative. Besides, we cannot really tell what these two components stand for. Therefore, clustering is not a good way for this analysis. </p>
+
+									</div>
+								</div>
+						</section>
+
+						<hr />
+
+						<section>
+								<h3>Logit Regression</h3>
+								<div class="row">
+									<div class="col-6 col-12-xsmall">
+										<!-- <h4>Unordered</h4> -->
+										<ul>
+											<li>Logit Regression Output
+												<span class="image fit"><img src="images/tm_09.png" alt="" /></span>
+											</li>
+										</ul>
+
+									</div>
+									<div class="col-6 col-12-xsmall">
+										<!-- <h4>Ordered</h4> -->
+										<p>As clustering does not work well, we start to try logit regression to see whether it could help us to understand the relationship between these three time variables and attractive event.  </p>
+										<p>The graph on the left shows the result. </p>
+
+									</div>
+								</div>
+						</section>
+
+						<hr />
+		
+						<!-- <section>
+								<h3>Lists</h3>
+								<div class="row">
+									<div class="col-6 col-12-xsmall">
+
+										<h4>Unordered</h4>
+										<ul>
+											<li>Dolor pulvinar etiam magna etiam.</li>
+											<li>Sagittis adipiscing lorem eleifend.</li>
+											<li>Felis enim feugiat dolore viverra.</li>
+										</ul>
+
+									</div>
+									<div class="col-6 col-12-xsmall">
+
+										<h4>Ordered</h4>
+										<ol>
+											<li>Dolor pulvinar etiam magna etiam.</li>
+											<li>Etiam vel felis at lorem sed viverra.</li>
+											<li>Felis enim feugiat dolore viverra.</li>
+											<li>Dolor pulvinar etiam magna etiam.</li>
+											<li>Etiam vel felis at lorem sed viverra.</li>
+											<li>Felis enim feugiat dolore viverra.</li>
+										</ol>
+									</div>
+								</div>
+						</section> -->
+
+					</div>
+				</div>
+
+			<!-- Footer -->
+				<footer id="footer">
+					<ul class="icons">
+						<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+						<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</footer>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
