@@ -64,45 +64,61 @@
 				<div id="main" class="wrapper style1">
 					<div class="container">
 						<header class="major">
-							<h2>Theme Analysis</h2>
+							<h2>Exploratory Analysis</h2>
+							<p>Basic Statistics & Outlier Detection</p>
 						</header>
+
+						<section>
+								<h3>Basic Statistics </h3>
+								<div class="row">
+									<div class="col-6 col-12-xsmall">
+										<!-- <h4>Unordered</h4> -->
+										<ul>
+											<li>Numerical Variables
+												<span class="image fit"><img src="images/ea_01.png" alt="" /></span>
+											</li>
+											<li>Categorical variables
+												<span class="image fit"><img src="images/ea_02.png" alt="" /></span>
+											</li>
+											<li>Variance Inflation Factor of Numerical Variables
+												<span class="image fit"><img src="images/vif.jpg" alt="" /></span>
+											</li>
+										</ul>
+
+									</div>
+									<div class="col-6 col-12-xsmall">
+										<!-- <h4>Ordered</h4> -->
+										<p>An average event in New York has tickets and is not free. It costs about 23 dollars, has 25 words in the description box, lasts a little over an  hour, usually takes place on Friday or Thursday nights in Greenwich Village or East Village, has 10 public transportation options around, with the closest transportation available within 87 meters (2 min walk), and surrounded by 900 businesses.</p>
+										<p> </p>
+										<p> </p>
+										<p>In order to detect multicollinearity, we introduced The Variance Inflation Factor, which is a measure of collinearity among predictor variables within a multiple regression. It is calculated by taking the the ratio of the variance of all a given model's betas divide by the variance of a single beta if it were fit alone. As a rule of thumb, VIF values in excess of 5 or 10 are often considered an indication that multicollinearity may by a cause of problem.</p>
+
+									</div>
+								</div>
+						</section>
+
 						<hr />
 
 						<!-- Content -->
-
-						<section>
-							<h3>Word Clouds - What are the Top Words for Businesses and Events?  </h3>
+						<section id="content1">
 							<div class="row">
-								<div class="col-6 col-12-xsmall">
-									<!-- <h4>Unordered</h4> -->
-									<ul>
-										<li> Event descriptions
-											<span class="image fit"><img src="images/wordcloud1.png" alt="" /></span>
-											<p>Word cloud for event descriptions. Words that stand out are New York, comedy show, join us, Edward Farrell, etc. These are the words that event planners think are the most appealing ones to show in advertising.</p>
-										</li>
-										<li> Business categories
-											<span class="image fit"><img src="images/wordcloud2.png" alt="" /></span>
-											<p>Word cloud for business categories. Words that stand out are coffee, tea, american, cocktail bars, breakfast, brunch, venues and event. We can kind of picture what New Yorkers are doing in their free time from this plot.</p>
-										</li>
-									</ul>
-								</div>
-							</div>
+								<header>
+									<h3>Outlier Detection  </h3>
+									<!-- <p>Numerical Variables</p> -->
+								</header>
+								<p>
+									<span class="image fit"><img src="images/ea_03.png" alt="" /></span>
+									Box plots for continuous variables. <br/>
+									Method 1: box plots visualization <br/>
+									Method 2: any row that contains data 3 standard deviations away from its mean  (897 detected) <br/>
+									Method 3: multidimensional outliers detection using LOF threshold 20 neighbors, score > 1.75 (627 detected) <br/>
+
+								</p>
+							<div/>
+
 						</section>
 
-						<section>
-							<h3>Topic Modeling - What Are the Common Themes Between Businesses and Events? </h3>
-							<div class="row">
-								<div class="col-6 col-12-xsmall"></div>
-									<!-- <h4>Unordered</h4> -->
-									<ul>
-										<li>Top 10 topics for the event description and business category data
-											<span class="image fit"><img src="images/theme_tm_1.png" alt="" /></span>
-										</li>
-										<p>Above are the topic modeling results for event descriptions and business categories. Similar topics are color coded the same way. It's not hard to see that the topics have a lot of overlaps from these two columns. In the following analysis, we will create four new columns from event descriptions: description_words, description_rows, has_url, has_image.</p>
-									</ul>
-								</div>			
-							</div>
-							</section>
+
 						<!-- <section>
 								<h3>Lists</h3>
 								<div class="row">
@@ -136,18 +152,26 @@
 
 			<!-- Footer -->
 				<footer id="footer">
+
 					<ul class="icons">
-						<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-						<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-						<li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+						<li><a href="#" class="icon solid alt fa-envelope"><span class="label">Email</span></a> 
+							<br/>Zihe Yang (zy151@georgetown.edu)
+							<br/>Zhiyu Lin (zl281@georgetown.edu)
+							<br/>Jiamin Zhong (jz644@georgetown.edu)
+						</li>
+					</ul>
+					<ul class="icons">
+						<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a>
+							<br/><a href="https://drive.google.com/drive/folders/1V3eWjTDUfOR_FNXsg7ccRr9ryhY0h_qI?usp=sharing">Project Source Code</a>
+							<br/><a href="https://github.com/ziheyang/ziheyang.github.io/tree/master/yelp_events">Website Source Code</a>
+						</li>
+						
 					</ul>
 					<ul class="copyright">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<li>&copy; Georgetown University. All rights reserved.</li><li>ANLY 501 Introduction to Data Analysis
 					</ul>
 				</footer>
+
 
 		</div>
 
